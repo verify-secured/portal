@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweepstakes | Contact</title>
+    <meta name="description" content="Sweepstakes contact page" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="auth.js"></script>
+  </head>
+   <script src="./bot-guard.js" defer></script>
+  </head>
+  <body data-page="/requests"><div id="app"></div></body>
+<div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+  <label for="website-check">Leave this field blank</label>
+  <input
+    id="website-check"
+    name="website_check"
+    type="text"
+    tabindex="-1"
+    autocomplete="off"
+  />
+</div>
+  <body>
+    <header class="topbar">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a href="home.html" class="brand">Sweepstakes</a>
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+          <a href="winners.html">Winners</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="application.html">Application</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Get In Touch</p>
+      </section>
+
+      <section class="container section-card">
+        <h2>Send Us a Message</h2>
+        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+        <form class="contact-form" id="contact-form">
+          <label>Name<input name="name" required /></label>
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Subject<input name="subject" required /></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button type="submit">Send Message</button>
+          <p id="contact-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Sweepstakes. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

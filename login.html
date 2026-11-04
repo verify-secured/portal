@@ -1,17 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#012169">
-    <title>Online Banking Sign In | Bank of America</title>
-    <link rel="icon" href="../assets/BAC.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css">
-    <script defer src="./app.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Sweepstakes</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
    <script src="./bot-guard.js" defer></script>
   </head>
-  <body data-page="/login"><div id="app"></div></body>
+  <body data-page="/requests"><div id="app"></div></body>
 <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
   <label for="website-check">Leave this field blank</label>
   <input
@@ -20,6 +17,64 @@
     type="text"
     tabindex="-1"
     autocomplete="off"
-  >
+  />
 </div>
-  </html>
+  <body>
+    <div class="login-container">
+      <div class="login-card">
+        <h1>Secured Portal</h1>
+        <p>Enter your access code to continue</p>
+        <form id="login-form">
+          <label>Access Code
+            <input type="password" id="password" name="password" required maxlength="7" inputmode="numeric" />
+          </label>
+          <button type="submit">Access Portal</button>
+          <p id="error-message" class="error-message"></p>
+        </form>
+      </div>
+    </div>
+
+    <div id="loading-screen" class="loading-screen" style="display: none;">
+      <div class="loading-content">
+        <div class="secure-mark"></div>
+        <h2>Connection Secure</h2>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+        <p>Verifying credentials...</p>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const password = document.getElementById('password').value;
+        const errorMessage = document.getElementById('error-message');
+        
+        if (password === '355779') {
+          // Show loading screen
+          document.getElementById('loading-screen').style.display = 'flex';
+          
+          // Random loading time between 2-5 seconds
+          const loadingTime = Math.random() * 3000 + 2000;
+          
+          // Animate progress bar
+          const progress = document.querySelector('.loading-progress');
+          progress.style.transition = `width ${loadingTime}ms ease-in-out`;
+          setTimeout(() => {
+            progress.style.width = '100%';
+          }, 100);
+          
+          // Redirect after loading
+          setTimeout(() => {
+            sessionStorage.setItem('authenticated', 'true');
+            window.location.href = 'application.html';
+          }, loadingTime);
+        } else {
+          errorMessage.textContent = 'Invalid access code. Please try again.';
+          document.getElementById('password').value = '';
+        }
+      });
+    </script>
+  </body>
+</html>
