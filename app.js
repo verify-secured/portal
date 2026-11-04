@@ -56,84 +56,84 @@ const pageContent = {
   "/banking": {
     title: "Banking that works for you",
     description: "Explore checking and savings accounts designed to help you manage your money with confidence.",
-    image: "../assets/personal.png",
+    image: "./assets/personal.png",
     topics: ["Checking accounts", "Savings accounts", "Certificates of deposit"],
     links: ["/login", "/login", "/login"],
   },
   "/credit-cards-public": {
     title: "Find a credit card that fits your life",
     description: "Explore card options, rewards, and tools to help you manage your credit.",
-    image: "../assets/yyh.png",
+    image: "./assets/yyh.png",
     topics: ["Cash back rewards", "Travel benefits", "Manage your card"],
     links: ["/login", "/login", "/login"],
   },
   "/loans": {
     title: "Plan for what's next",
     description: "Learn about home loans, auto financing, and borrowing options.",
-    image: "../assets/yy.png",
+    image: "./assets/yy.png",
     topics: ["Home loans", "Auto loans", "Personal lending"],
     links: ["/contact-us", "/contact-us", "/contact-us"],
   },
   "/investments-public": {
     title: "Investing for your goals",
     description: "Explore investing choices and guidance for every stage of your financial journey.",
-    image: "../assets/wealth%20management.png",
+    image: "./assets/wealth%20management.png",
     topics: ["Merrill investing", "Guidance and advice", "Plan for retirement"],
     links: ["/wealth-management", "/wealth-management", "/learning"],
   },
   "/learning": {
     title: "Better Money Habits",
     description: "Build your financial knowledge with practical articles and resources.",
-    image: "../assets/hhh.png",
+    image: "./assets/hhh.png",
     topics: ["Build a budget", "Understand credit", "Start saving"],
     links: ["/learning", "/learning", "/learning"],
   },
   "/contact-us": {
     title: "Contact us",
     description: "Find the right support for your banking questions.",
-    image: "../assets/Contact%20Us.png",
+    image: "./assets/Contact%20Us.png",
     topics: ["Personal banking", "Credit cards", "Online banking support"],
     links: ["/help", "/help", "/help"],
   },
   "/locations": {
     title: "Find a financial center",
     description: "Search for nearby financial centers and ATMs or make an appointment.",
-    image: "../assets/Locations.png",
+    image: "./assets/Locations.png",
     topics: ["Financial centers", "ATMs", "Schedule an appointment"],
     links: ["/contact-us", "/contact-us", "/contact-us"],
   },
   "/help": {
     title: "How can we help?",
     description: "Find answers to common questions and get help with your accounts.",
-    image: "../assets/yy.png",
+    image: "./assets/yy.png",
     topics: ["Online banking", "Cards and payments", "Account security"],
     links: ["/login", "/contact-us", "/contact-us"],
   },
   "/about": {
     title: "About us",
     description: "Learn about our company, our people, and our commitment to the communities we serve.",
-    image: "../assets/About%20Us.png",
+    image: "./assets/About%20Us.png",
     topics: ["Our company", "Community impact", "Careers"],
     links: ["/about", "/about", "/contact-us"],
   },
   "/small-business": {
     title: "Small business banking",
     description: "Tools, accounts, and guidance to help small businesses move forward.",
-    image: "../assets/small%20business.png",
+    image: "./assets/small%20business.png",
     topics: ["Business checking", "Business credit cards", "Cash flow solutions"],
     links: ["/contact-us", "/contact-us", "/contact-us"],
   },
   "/wealth-management": {
     title: "Wealth management",
     description: "Personalized guidance and investment solutions to help you pursue your financial goals.",
-    image: "../assets/wealth%20management.png",
+    image: "./assets/wealth%20management.png",
     topics: ["Merrill advisory", "Financial planning", "Private Bank"],
     links: ["/contact-us", "/contact-us", "/contact-us"],
   },
   "/businesses-institutions": {
     title: "Businesses & Institutions",
     description: "Financial solutions for companies, institutions, and organizations around the world.",
-    image: "../assets/Businesses%20%26%20Institutions.png",
+    image: "./assets/Businesses%20%26%20Institutions.png",
     topics: ["Global banking", "Capital markets", "Treasury services"],
     links: ["/contact-us", "/contact-us", "/contact-us"],
   },
@@ -268,7 +268,7 @@ function featureLink(label, feature, className = "text-link") {
 
 function logo(href = "/") {
   return `<a class="brand" href="${routeHref(href)}" aria-label="Demo Bank">
-    <img src="../assets/lgo.png" alt="Bank of America logo" width="120" height="30">
+    <img src="./assets/lgo.png" alt="Bank of America logo" width="120" height="30">
   </a>`;
 }
 
@@ -315,7 +315,7 @@ function publicHeader(showLoginPanel = true) {
       <div class="container public-header-inner">
         ${showLoginPanel ? `<div class="signin-area">
           <div class="signin-form-wrap">${loginCard(true)}</div>
-          <img class="signin-image" src="../assets/yy.png" alt="Online banking services">
+          <img class="signin-image" src="./assets/yy.png" alt="Online banking services">
         </div>` : ""}
       </div>
     </header>`;
@@ -354,7 +354,7 @@ function marketingPage(path) {
           <p class="hero-copy">Explore a banking interface for everyday account tools, money requests, and financial education.</p>
           ${link("Get Started", "/login", "button button-red")}
         </div>
-        <img class="hero-image" src="../assets/personal.png" alt="Personal banking experience">
+        <img class="hero-image" src="./assets/personal.png" alt="Personal banking experience">
       </div>
     </section>
     <section class="section container">
@@ -385,7 +385,7 @@ function marketingPage(path) {
     </section>
     <section class="section container hero-grid mobile-banking">
       <div><h2>Banking on the go</h2><p>Check balances, transfer money, pay bills, and more with convenient mobile banking tools.</p>${link("Explore mobile banking", "/help", "text-link")}</div>
-      <img class="hero-image" src="../assets/personal2.png" alt="Mobile banking experience">
+      <img class="hero-image" src="./assets/personal2.png" alt="Mobile banking experience">
     </section>`;
   }
 
@@ -394,7 +394,7 @@ function marketingPage(path) {
       <div class="container open-account">
         <div><p class="eyebrow">ONLINE BANKING</p><h1>Open an account</h1><p>Checking, savings, credit cards, home loans, auto loans, and more.</p>
           <div class="link-cloud">${link("Checking", "/banking")}${link("Savings & CDs", "/banking")}${link("Credit Cards", "/credit-cards-public")}${link("Home Loans", "/loans")}${link("Auto Loans", "/loans")}${link("Investing", "/investments-public")}</div>
-        </div><img class="hero-image" src="../assets/hhh.png" alt="Explore account options">
+        </div><img class="hero-image" src="./assets/hhh.png" alt="Explore account options">
       </div>
     </section>
     <section class="section container"><div class="section-heading"><h2>Your financial goals matter</h2><p>Explore practical resources and tools to help you make informed financial decisions.</p></div>

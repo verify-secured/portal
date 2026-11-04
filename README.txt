@@ -7,10 +7,10 @@ To open it:
 2. Double-click index.html for the home page, or open a named page such as
    personal.html, banking.html, or account-dashboard.html.
 
-No Vite, Node.js, or installation is required. Keep the assets folder beside
-the public folder, and keep app.js and styles.css beside the HTML pages so the
-pages and their images continue to load. The separate dashboard.html file is
-preserved and is not part of the Demo Bank simulation.
+No Vite, Node.js, or installation is required. Keep assets, app.js, and
+styles.css beside the HTML pages so the pages and their images continue to
+load. The separate dashboard.html file is preserved and is not part of the
+Demo Bank simulation.
 
 This is a Demo B interface simulation, not a bank. The retained Bank of
 America logo is illustrative only. The sign-in and account screens do not
